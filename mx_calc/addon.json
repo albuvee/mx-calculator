@@ -1,13 +1,13 @@
 {
   "name": "MX Calculator",
   "shortname": "mxcalulator",
-  "version": "3.0.5",
+  "version": "3.1.0",
   "foundation_version": "4.5.2",
   "description": "MX Calculator provides extended mathematical operations in ExpressionEngine templates.",
   "license": "MaxLazar",
   "namespace": "MX\\Mx_calc",
   "require": {
-    "php": ">=5.3.*",
+    "php": ">=8.1.*",
     "expressionengine/core": ">=3.5.17"
   },
   "resources": {

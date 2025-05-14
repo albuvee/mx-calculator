@@ -3,7 +3,9 @@
 require_once PATH_THIRD . 'mx_calc/addon.setup.php';
 
 if (!class_exists('EvalMath')) {
-    require_once PATH_THIRD . 'mx_calc/libraries/evalmath.class.php';
+    require_once PATH_THIRD . 'mx_calc/libraries/EvalMathStack.php';
+    require_once PATH_THIRD . 'mx_calc/libraries/EvalMathFunctions.php';
+    require_once PATH_THIRD . 'mx_calc/libraries/EvalMath.php';
 }
 
 /**
