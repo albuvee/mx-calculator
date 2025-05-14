@@ -46,10 +46,10 @@ class Mx_calc_ext
             $final_template = ee()->extensions->last_call;
         }
 
-        if(isset(ee()->session->cache['mx_calc']['late'])) {
+        if (isset(ee()->session->cache['mx_calc']['late'])) {
             $var = [];
             foreach (ee()->session->cache['mx_calc']['late'] as $index => $tag) {
-               $var[0][$index] = self::_calc($tag['tagdata'], $tag['param']);
+                $var[0][$index] = self::_calc($tag['tagdata'], $tag['param']);
             }
 
             $final_template = ee()->TMPL->parse_variables($final_template, $var);
@@ -85,7 +85,6 @@ class Mx_calc_ext
             }
 
             return $result;
-
         } else {
             if (!isset(ee()->session->cache['mx_calc']['var'][0][$param['variable']])) {
                 ee()->session->cache['mx_calc']['var'][0][$param['variable']] = '';
@@ -162,7 +161,7 @@ class Mx_calc_ext
      * @param Array   Settings
      * @return  void
      */
-    function settings_form($current)
+    public function settings_form($current)
     {
         $name = 'mx_calc';
 
@@ -211,7 +210,7 @@ class Mx_calc_ext
      *
      * @return void
      */
-    function save_settings()
+    public function save_settings()
     {
         if (empty($_POST)) {
             show_error(lang('unauthorized_access'));
@@ -245,5 +244,4 @@ class Mx_calc_ext
 
         return serialize($settingData);
     }
-
 }
